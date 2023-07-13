@@ -1,4 +1,4 @@
-import { computed } from 'vue'
+import { computed, toRef } from 'vue'
 import { useComponentColor, useNamespace } from '@tuniao/tnui-vue3-uniapp/hooks'
 
 import type { CSSProperties } from 'vue'
@@ -9,7 +9,7 @@ export const useTimeLineDataCustomStyle = (props: TimeLineDataProps) => {
 
   // 解析颜色
   const [dotColorClass, dotColorStyle] = useComponentColor(
-    props.dotColor,
+    toRef(props, 'dotColor'),
     'text'
   )
 
