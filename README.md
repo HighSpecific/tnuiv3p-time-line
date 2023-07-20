@@ -96,7 +96,7 @@ const timeLineData: TimeLineData[] = [
         v-for="(item, index) in timeLineData"
         :key="index"
         :title="item.month"
-        :title-icon="item.icon ?? ''"
+        :title-icon="item.icon !== undefined ? item.icon : ''"
       >
         <TnTimeLineData
           v-for="(dataItem, dataIndex) in item.data"
@@ -148,16 +148,14 @@ const timeLineData: TimeLineData[] = [
 | ------- | -------- | -------------- |
 | default | 时间节点 | TnTimeLineItem |
 
-
-
 ### TnTimeLineItem Props
 
-| 属性名         | 说明                                                         | 类型   | 默认值 | 可选值                                                       |
-| -------------- | ------------------------------------------------------------ | ------ | ------ | ------------------------------------------------------------ |
-| title          | 标题                                                         | String | -      | -                                                            |
-| title-icon     | 标题icon                                                     | String | -      | [图标有效值](https://vue3.tuniaokj.com/zh-CN/component/icon.html) |
-| dot-bg-color   | 左边小点背景，可以使用图鸟内置的[背景色](https://vue3.tuniaokj.com/zh-CN/guide/style/background.html)、hex、rgb、rgba | String | -      | -                                                            |
-| dot-text-color | 左边小点字体颜色，支持图鸟内置的[颜色值](https://vue3.tuniaokj.com/zh-CN/guide/style/text.html)、hex、rgb、rgba | String | -      | -                                                            |
+| 属性名         | 说明                                                                                                                  | 类型   | 默认值 | 可选值                                                            |
+| -------------- | --------------------------------------------------------------------------------------------------------------------- | ------ | ------ | ----------------------------------------------------------------- |
+| title          | 标题                                                                                                                  | String | -      | -                                                                 |
+| title-icon     | 标题icon                                                                                                              | String | -      | [图标有效值](https://vue3.tuniaokj.com/zh-CN/component/icon.html) |
+| dot-bg-color   | 左边小点背景，可以使用图鸟内置的[背景色](https://vue3.tuniaokj.com/zh-CN/guide/style/background.html)、hex、rgb、rgba | String | -      | -                                                                 |
+| dot-text-color | 左边小点字体颜色，支持图鸟内置的[颜色值](https://vue3.tuniaokj.com/zh-CN/guide/style/text.html)、hex、rgb、rgba       | String | -      | -                                                                 |
 
 ### TnTimeLineItem Emits
 
@@ -172,12 +170,10 @@ const timeLineData: TimeLineData[] = [
 | default | 时间节点数据   | TnTimeLineData |
 | title   | 自定义标题数据 | -              |
 
-
-
 ### TnTimeLineData Props
 
-| 属性名    | 说明                                                         | 类型   | 默认值 | 可选值 |
-| --------- | ------------------------------------------------------------ | ------ | ------ | ------ |
+| 属性名    | 说明                                                                                                          | 类型   | 默认值 | 可选值 |
+| --------- | ------------------------------------------------------------------------------------------------------------- | ------ | ------ | ------ |
 | dot-color | 左边节点点颜色，支持图鸟内置的[颜色值](https://vue3.tuniaokj.com/zh-CN/guide/style/text.html)、hex、rgb、rgba | String | -      | -      |
 
 ### TnTimeLineItem Emits

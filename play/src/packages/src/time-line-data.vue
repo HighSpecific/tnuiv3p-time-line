@@ -10,8 +10,10 @@ const emits = defineEmits(timeLineDataEmits)
 
 const timeLineContext = inject(timeLineKey, undefined)
 
-const showLine = computed<boolean>(
-  () => timeLineContext?.showLine.value ?? true
+const showLine = computed<boolean>(() =>
+  timeLineContext?.showLine.value === undefined
+    ? true
+    : timeLineContext?.showLine.value
 )
 
 const { ns, dotClass, dotStyle } = useTimeLineDataCustomStyle(props)
