@@ -4,6 +4,13 @@ import type { ExtractPropTypes } from 'vue'
 
 export const timeLineDataProps = buildProps({
   /**
+   * @description 节点图标
+   */
+  dotIcon: {
+    type: String,
+    default: 'circle-fill'
+  },
+  /**
    * @description 节点颜色
    */
   dotColor: String,

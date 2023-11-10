@@ -172,9 +172,10 @@ const timeLineData: TimeLineData[] = [
 
 ### TnTimeLineData Props
 
-| 属性名    | 说明                                                                                                          | 类型   | 默认值 | 可选值 |
-| --------- | ------------------------------------------------------------------------------------------------------------- | ------ | ------ | ------ |
-| dot-color | 左边节点点颜色，支持图鸟内置的[颜色值](https://vue3.tuniaokj.com/zh-CN/guide/style/text.html)、hex、rgb、rgba | String | -      | -      |
+| 属性名    | 说明                                                                                                          | 类型   | 默认值      | 可选值                                                            |
+| --------- | ------------------------------------------------------------------------------------------------------------- | ------ | ----------- | ----------------------------------------------------------------- |
+| dot-icon  | 节点图标                                                                                                      | String | circle-fill | [图标有效值](https://vue3.tuniaokj.com/zh-CN/component/icon.html) |
+| dot-color | 左边节点点颜色，支持图鸟内置的[颜色值](https://vue3.tuniaokj.com/zh-CN/guide/style/text.html)、hex、rgb、rgba | String | -           | -                                                                 |
 
 ### TnTimeLineItem Emits
 

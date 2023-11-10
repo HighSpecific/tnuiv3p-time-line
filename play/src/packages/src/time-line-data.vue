@@ -38,7 +38,7 @@ export default {
 <template>
   <view :class="[ns.b(), ns.is('line', showLine)]" @tap.stop="clickHandle">
     <view :class="[ns.e('dot'), dotClass]" :style="dotStyle">
-      <TnIcon name="circle-fill" />
+      <TnIcon :name="dotIcon" />
     </view>
     <view :class="[ns.e('content')]">
       <slot />
